@@ -12,38 +12,44 @@
     <link rel="icon" type="image/jpg" href="images/favicon.jpg">
 </head>
 <body>
+<header> 
     <h1>Ewenetu Haile</h1>
     <img src="images/profile.jpg" alt="Portrait of Ewenetu Haile smiling"
      title="Ewenetu Haile" width="200" height="200">
     <p>Software Engineering student and aspiring web developer.</p>
-    <p>
+    <nav>
         <a href="#about">About</a> |
         <a href="#skills">Skills</a> |
         <a href="#projects">Projects</a> |
         <a href="#education">Education</a> |
         <a href="#contact">Contact</a> |
         <a href="projects.html">All Projects</a>
-    </p>
-    <hr>
+    </nav>
+</header>
+<main>
 
-    <h2 id="about">About Me</h2>
-    <p>I am a 3<sup>rd</sup> year <strong>Software Engineering</strong> student.
-    I <em>really</em> enjoy utilizing AI to make pure technical aspects easier to finish, and my current goal is to
-    <mark>incorporate various AI tools into my development workflow</mark>.</p>
-    <p>Languages I have used: <b>Python</b>, <b>C++</b> and <i>a little</i>
-    JavaScript.</p>
-    <p>Fun fact: I drink 1.5-2 litres of H<sub>2</sub>O every day.</p>
-    <hr>
-    <h2>What Inspires Me</h2>
-    <blockquote>
-    “Yesterday is history, tomorrow is a mystery, but today is a gift. Thats why they call it the present.” — Master Shifu, Kung Fu Panda
-    </blockquote>
-    <p>A close friend always says <q>practice makes progress</q>, so I strive for being better not perfect every day.</p>
-    <p>Book I am reading: <cite>Dungeon Crawler Carl</cite> by Matt Dinmann</p>
-    <hr>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a 3<sup>rd</sup> year <strong>Software Engineering</strong> student.
+        I <em>really</em> enjoy utilizing AI to make pure technical aspects easier to finish, and my current goal is to
+        <mark>incorporate various AI tools into my development workflow</mark>.</p>
+        <p>Languages I have used: <b>Python</b>, <b>C++</b> and <i>a little</i>
+        JavaScript.</p>
+        <p>Fun fact: I drink 1.5-2 litres of H<sub>2</sub>O every day.</p>
+    </section>
+    <aside>
 
+        <h2>What Inspires Me</h2>
+        <blockquote>
+        “Yesterday is history, tomorrow is a mystery, but today is a gift. Thats why they call it the present.” — Master Shifu, Kung Fu Panda
+        </blockquote>
+        <p>A close friend always says <q>practice makes progress</q>, so I strive for being better not perfect every day.</p>
+        <p>Book I am reading: <cite>Dungeon Crawler Carl</cite> by Matt Dinmann</p>
+    </aside>
 
-    <h2 id="skills">Skills</h2>
+    
+    <section id="skills">
+    <h2>Skills</h2>
     <ul>
       <li>Programming Languages
         <ul type="square">
@@ -84,43 +90,51 @@
     <dt><b>Git and GitHub</b></dt>
     <dd>Saves versions of my code and shares my projects online.</dd>
     </dl>
+</section>
 
-    <hr>
-    <h2 id="projects">Projects</h2>
-    <h3>Simple Calculator</h3>
-    <img src="images/project-calculator.png" alt="Screenshot of the calculator showing 12
-    + 30 = 42"
-     width="400" height="250">
-    <p>A calculator that adds, subtracts, multiplies and divides.</p>
-
-    <h3>Library Management System</h3>
-    <img src="images/project-library.png" alt="Screenshot of the library management system showing borrow function."
-     width="400" height="250">
-    <p>A console program for borrowing and returning books.</p>
-
-    <h3>DemLink</h3>
-     <img src="images/project-demlink.jpg" alt="Screenshot of the DemLink system."
-     width="400" height="250">
-    <p>A blood unit inventory and emergency response management system for health facilities.</p>
-
-    <h3>Bank Management System</h3>
-    <img src="images/project-bank.jpg" alt="Screenshot of the bank management system."
-     width="400" height="250">
-    <p>A console program for managing bank operations.</p>
-    
-    <h3>My First Program</h3>
-    <p>My first program was written in C++ and it printed a message to the console.</p>
-    <pre><code>#include &ltiostream&gt
-    using namespace std;
-    int main() {
-    cout &lt&lt "Death and Truth are inevitable" &lt&lt endl;
-    return 0;
-    }</code></pre>
+    <section id="projects">
+    <h2>Projects</h2>
+    <article>
+        <h3>Simple Calculator</h3>
+        <img src="images/project-calculator.png" alt="Screenshot of the calculator showing 12
+        + 30 = 42"
+        width="400" height="250">
+        <p>A calculator that adds, subtracts, multiplies and divides.</p>
+    </article>
+    <article>
+        <h3>Library Management System</h3>
+        <img src="images/project-library.png" alt="Screenshot of the library management system showing borrow function."
+        width="400" height="250">
+        <p>A console program for borrowing and returning books.</p>
+    </article>
+    <article>
+        <h3>DemLink</h3>
+        <img src="images/project-demlink.jpg" alt="Screenshot of the DemLink system."
+        width="400" height="250">
+        <p>A blood unit inventory and emergency response management system for health facilities.</p>
+    </article>
+    <article>
+        <h3>Bank Management System</h3>
+        <img src="images/project-bank.jpg" alt="Screenshot of the bank management system."
+        width="400" height="250">
+        <p>A console program for managing bank operations.</p>
+    </article>
+    <article>
+        <h3>My First Program</h3>
+        <p>My first program was written in C++ and it printed a message to the console.</p>
+        <pre><code>#include &ltiostream&gt
+        using namespace std;
+        int main() {
+        cout &lt&lt "Death and Truth are inevitable" &lt&lt endl;
+        return 0;
+        }</code></pre>
+    </article>
     <p><a href="projects.html">See all my projects →</a></p>
+    </section>
    
 
-    <hr>
-    <h2 id="education">Education</h2>
+    <section id="education">
+    <h2>Education</h2>
     <h3>BSc in Software Engineering</h3>
     <p>Addis Ababa Science and Technology University, 2024 - present</p>
     <table border="1" cellpadding="8" cellspacing="0">
@@ -187,10 +201,11 @@
 
     </tfoot>
 </table>
+</section>  
     
-    
-    <hr>
-    <h2 id="contact">Contact</h2>
+
+    <section id="contact">
+    <h2>Contact</h2>
     <p>Address:<br>Addis Ababa,<br>Ethiopia</p>
     <p>Email: <a href="mailto:ewenetuhaile4@gmail.com">ewenetuhaile4@gmail.com</a></p>
     <p>Phone: <a href="tel:+251940435462">+251 940 435 462</a></p>
@@ -209,7 +224,11 @@
     href="https://www.linkedin.com/in/ewenetu-yemaneberhan" alt="LinkedIn">
     <area shape="rect" coords="420,40,580,160"
     href="mailto:ewenetuhaile4@gmail.com" alt="Email">
-    </map>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2026 Ewenetu Haile. All rights reserved.</p>
+</footer>
 </body>
 </html>
 
