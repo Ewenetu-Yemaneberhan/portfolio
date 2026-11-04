@@ -229,10 +229,10 @@
         <fieldset>
         <legend>Your Details</legend>
         <label for="fullname">Full name:</label>
-        <input type="text" id="fullname" name="fullname">
+        <input type="text" id="fullname" name="fullname" required>
         <br><br>
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
+        <input type="email" id="email" name="email" required>
         </fieldset>
         <fieldset>
         <legend>Project Details</legend>
@@ -265,7 +265,7 @@
             <legend>Your Message</legend>
 
             <label for="reason">Reason for contacting me:</label>
-            <select id="reason" name="reason">
+            <select id="reason" name="reason" required>
                 <optgroup label="Work">
                     <option value="internship"> Intership offer</option>
                     <option value="freelance">Freelance project</option>
@@ -279,7 +279,7 @@
             </select>
             <br><br>
             <Label for="message">Message:</Label><br>
-            <textarea id="message" name="message" rows="5" cols="50"></textarea>
+            <textarea id="message" name="message" rows="5" cols="50" required></textarea>
             <br>
             <input type="checkbox" id="copy" name="copy" value="yes">
             <label for="copy">Send me a copy of this message</label>
