@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <canvas id="logo" width="120" height="120">Ewenetu Haile logo</canvas>
     <meta name="description" content="Portfolio of Ewenetu Haile, Software Engineering
     student and aspiring web developer in Addis Ababa.">
     <meta name="keywords" content="Ewenetu Haile, portfolio, software engineering, web
@@ -13,7 +14,12 @@
 </head>
 <body>
 <header> 
-    <button type="button"
+   
+    <h1>Ewenetu Haile</h1>
+    <img src="images/profile.jpg" alt="Portrait of Ewenetu Haile smiling"
+     title="Ewenetu Haile" width="200" height="200">
+    <p>Software Engineering student and aspiring web developer.</p>
+     <button type="button"
     onclick="document.getElementById('hireDialog').showModal()">Hire me</button>
     <dialog id="hireDialog">
         <h2>Available for internships</h2>
@@ -22,11 +28,6 @@
     download>download my CV</a>.</p>
         <button type="button"onclick="document.getElementById('hireDialog').close()">Close</button>
     </dialog>
-
-    <h1>Ewenetu Haile</h1>
-    <img src="images/profile.jpg" alt="Portrait of Ewenetu Haile smiling"
-     title="Ewenetu Haile" width="200" height="200">
-    <p>Software Engineering student and aspiring web developer.</p>
     <nav>
         <a href="#about">About</a> |
         <a href="#skills">Skills</a> |
@@ -115,6 +116,48 @@
         <label for="lvl-c++">C++</label>
         <meter id="lvl-c++" value="0.6" min="0" max="1">60%</meter>
     </p>
+
+    <!-- The integrated canvas under your Skill Levels -->
+<canvas id="skillsChart" width="300" height="150"></canvas>
+
+<script>
+{
+  // Using an isolated block scope {} automatically prevents variable name collisions!
+  const canvas = document.getElementById('skillsChart');
+  const ctx = canvas.getContext('2d');
+
+  // Read the exact value attributes directly from your markup
+  const skillsData = [
+    { name: "HTML",   val: parseFloat(document.getElementById('lvl-html').value) },
+    { name: "Python", val: parseFloat(document.getElementById('lvl-python').value) },
+    { name: "JS",     val: parseFloat(document.getElementById('lvl-js').value) },
+    { name: "C++",    val: parseFloat(document.getElementById('lvl-c++').value) }
+  ];
+
+  const maxPadding = 120; 
+  const barWidth = 35;
+  const gap = 30;
+  const startX = 40;
+
+  skillsData.forEach((skill, index) => {
+    let height = skill.val * maxPadding;
+    let x = startX + index * (barWidth + gap);
+    let y = 130 - height; // Stand flat on the baseline floor
+
+    // Minimalist bars: using the same brand blue logo fill color
+    ctx.fillStyle = "#1f5fa8";
+    ctx.fillRect(x, y, barWidth, height);
+
+    // Simple labels aligned directly underneath
+    ctx.fillStyle = "#333333";
+    ctx.font = "12px sans-serif"; // Standard, clean font weight
+    ctx.textAlign = "center";
+    ctx.textBaseline = "top";
+    ctx.fillText(skill.name, x + (barWidth / 2), 135);
+  });
+}
+</script>
+
 
     <h3>My Learning Roadmap</h3>
     <ol type="1">
@@ -362,6 +405,27 @@
 <footer>
     <p>&copy; 2026 Ewenetu Haile. All rights reserved.</p>
 </footer>
+<script>
+    const canvas = document.getElementById('logo');
+    const ctx = canvas.getContext('2d');
+
+    // 1. Blue square background: x, y, width, height
+    ctx.fillStyle = "#1f5fa8";
+    ctx.fillRect(0, 0, 120, 120);
+
+    // 2. White circle: centre x, centre y, radius, start angle, end angle
+    ctx.beginPath();
+    ctx.arc(60, 60, 45, 0, 2 * Math.PI);
+    ctx.fillStyle = "cyan";
+    ctx.fill();
+
+    // 3. Initials in the middle
+    ctx.fillStyle = "#1f5fa8";
+    ctx.font = "bold 36px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText("EH", 60, 62);
+</script>
 </body>
 </html>
 
